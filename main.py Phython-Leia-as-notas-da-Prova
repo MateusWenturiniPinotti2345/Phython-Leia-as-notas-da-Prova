@@ -1,0 +1,36 @@
+#Para uma turma de 10 alunos
+#Leia as notas da primeira prova e determine:#
+#a) Maior e a menor not  Obtidas pela turma
+#b) Porcetual de alunos abaixo da média(média é 7)
+#c Porcentual de alunos abaixo da média (média é 7)
+#d) Quantos alunos precisam de aula de reforço (nota < 6)
+#Calculo do Percentual:
+#Percentual_Média = QtdAlunosMédia*100/QtdAlunos
+
+#Resposta aqui
+
+MaiorNota = 0 # #ele está recebendo a maior nota
+MenorNota = 10.1 # ele está recebendo a menor nota
+QtdAlunosMedia = 0 # # ele está validando QtdAlunosMedia 
+QtdAlunosAbaixoMedia = 0
+QtdAlunosReforco = 0
+for QtdAlunos  in range(1,4):
+    print("Nota",QtdAlunos,":" )
+    Nota = float(input("Informe primeira Nota da prova: "))
+    if (Nota >= 7):
+     QtdAlunosMedia+=1
+    if (Nota < 7):
+     QtdAlunosAbaixoMedia+=1
+  
+    if (Nota < 6):
+      QtdAlunosReforco+=1
+
+    if (Nota > MaiorNota ):
+     MaiorNota = Nota
+    if (Nota < MenorNota):
+     MenorNota = Nota 
+
+print("A Maior Nota é ", MaiorNota, "Menor Nota é: ",MenorNota)
+print("Alunos na média ou acima da média: ",(QtdAlunosMedia*100/QtdAlunos))
+print("alunos abaixo da média: ",          (QtdAlunosAbaixoMedia*100/QtdAlunos))
+print("Alunos precisam de aula de reforço:" ,QtdAlunosReforco)
